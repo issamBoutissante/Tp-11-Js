@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercice 1</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="text1" />
+      <input type="text" id="text2" />
+      <button id="permuter">permuter</button>
+    </form>
+    <script>
+      var text1 = document.getElementById("text1");
+      var text2 = document.getElementById("text2");
+      document.getElementById("permuter").onclick = function (e) {
+        e.preventDefault();
+        var temp = text1.value;
+        text1.value = text2.value;
+        text2.value = temp;
+      };
+    </script>
+  </body>
+</html>
