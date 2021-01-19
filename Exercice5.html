@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercice 5</title>
+    <style>
+      div {
+        height: 200px;
+        text-align: center;
+        font-size: 20vw;
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="temp"></div>
+  </body>
+  <script>
+    setInterval(() => {
+      var date = new Date();
+      document.getElementById("temp").textContent =
+        date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    }, 1000);
+  </script>
+</html>

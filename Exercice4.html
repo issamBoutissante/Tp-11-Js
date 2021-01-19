@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercice 4</title>
+  </head>
+  <body>
+    <textarea id="text" cols="30" rows="5"></textarea>
+    nombre de caracteres restant
+    <input type="text" id="nombreRest" />
+  </body>
+  <script>
+    var textArea = document.getElementById("text");
+    textArea.onkeydown = change;
+    textArea.onkeyup = change;
+    function change(e) {
+      var length = e.target.value.length;
+      if (length > 60 && e.keyCode != 8) {
+        e.preventDefault();
+        return alert("le text ne doit pas contenir plus de 60 caracteres");
+      }
+      document.getElementById("nombreRest").value =
+        60 - parseInt(e.target.value.length);
+    }
+  </script>
+</html>

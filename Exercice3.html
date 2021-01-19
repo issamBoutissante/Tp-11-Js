@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercice 3</title>
+  </head>
+  <body>
+    clicker pour afficher le jour de la semaine actuel
+    <input type="button" value="Afficher" onclick="afficher()" />
+  </body>
+  <script>
+    var jours = [
+      "dimanche",
+      "Lundi",
+      "Mardi",
+      "Mercredi",
+      "Jeudi",
+      "Vendredi",
+      "samedi",
+    ];
+    function afficher() {
+      document.write(jours[new Date().getDay()]);
+    }
+  </script>
+</html>
